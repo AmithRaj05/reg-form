@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sample Website</title>
+	<!--Meta Tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+
+    <!--Bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!--bootstrap social and font awesome links-->
+    <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <!--style for website-->
+    <style type="text/css">
+      .jumbotron{
+        background-image: linear-gradient(to right, #3EADEF, #ABE9CD) !important;
+        color: floralwhite;
+        font-family: serif;
+        font-variant: small-caps;
+        font-weight: bold;
+      }
+      body{
+        background-image: linear-gradient(to right, #D7E1EC, #FEFFFF);
+        color: black;
+      }
+    </style>
+
+</head>
+<body>
+<!--Header-->
+	<header class="jumbotron">
+    <div class="container">
+      <div class="row">
+        <h1>SHAREDPRO</h1>
+      </div>
+    </div>
+  </header>
+
+<br><br>
+
+<!--script for form validation-->
+<script type="text/javascript">
+(function() {
+'use strict';
+window.addEventListener('load', function() {
+var forms = document.getElementsByClassName('needs-validation');
+var validation = Array.prototype.filter.call(forms, function(form) {
+form.addEventListener('submit', function(event) {
+if (form.checkValidity() === false) {
+event.preventDefault();
+event.stopPropagation();
+}
+form.classList.add('was-validated');
+}, false);
+});
+}, false);
+})();
+</script>
+
+<!--form-->
+<div class="container">
+  <form class="needs-validation" novalidate>
+    <div class="col-12 col-md-9">
+      <div class="form-group row">
+        <label for="validationCustom01" class="col-md-2 col-form-label">First name</label>
+        <div class="col-md-10">
+          <input type="text" class="form-control" id="validationCustom01" placeholder="Eg. John" required>
+          <div class="invalid-feedback">
+            Please enter a valid first name.
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="validationCustom02" class="col-md-2 col-form-label">Last name</label>
+        <div class="col-md-10">
+          <input type="text" class="form-control" id="validationCustom02" placeholder="Eg. Doe" required>
+          <div class="invalid-feedback">
+            Please enter a valid last name.
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="validationCustomUsername" class="col-md-2 col-form-label">Phone Number</label>
+        <div class="col-md-10">
+          <input type="tel" class="form-control" id="validationCustomNumber" placeholder="Eg. 9876543210" pattern="[0-9]{10}" required>
+          <div class="invalid-feedback">
+            Please enter a valid phone number.
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="validationCustom03" class="col-md-2 col-form-label">Date of birth</label>
+        <div class="col-md-10">
+          <input type="Date" class="form-control" id="validationCustom03" placeholder="dd-mm-yyyy" required>
+          <div class="invalid-feedback">
+            Please enter valid DOB.
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="validationCustom05" class="col-md-2 col-form-label">Email address</label>
+        <div class="col-md-10">
+          <input type="Email" class="form-control" id="validationCustom05" placeholder="Eg. xxx@yyy.com" required>
+          <div class="invalid-feedback">
+            Please enter a valid Email address.
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="validationCustom04" class="col-md-2 col-form-label">Password</label>
+        <div class="col-md-10">
+          <input type="Password" class="form-control" id="validationCustom04" pattern=".{8,}" placeholder="Minimum of 8 characters is required" required>
+          <div class="invalid-feedback">
+            Your password must contain minimum 8 characters.
+          </div>
+        </div>
+      </div>
+  <button class="btn btn-primary btn-sm" type="submit">Register</button>
+</form>
+</div>
+</body>
+</html>
