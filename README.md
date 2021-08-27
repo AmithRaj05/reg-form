@@ -1,5 +1,5 @@
-# sharedprointern
-This is for an internship with sharedpro
+# reg-form
+This is a front-end website, that accepts user inputs and validates them against preset rules.
 
-
-index.html file is the main website file. Rest are supporting files
+The user inputs taken are: First name, Last name, Mobile Number and Email ID
+All these inputs are dynamically checked against a set of predefined rules. (ex. Mobile Number cannot be more than 10 numbers or contain alphabets)
